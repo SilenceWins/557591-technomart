@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Егор Варавин](https://up.htmlacademy.ru/htmlcss/19/user/557591).
-* Наставник: `Неизвестно`.
+* Наставник: [Вадим Новаш](https://htmlacademy.ru/profile/stakeout).
 
 ---
 

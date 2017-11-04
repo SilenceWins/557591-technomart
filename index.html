@@ -231,17 +231,19 @@
           <div class="hidden contacts-map-full"></div>
         </div>
         <button class="btn btn-feedback" type="button">Напишите нам!</button>
-        <form class="hidden feedback" action="//feedback" method="POST">
-          <label class="feedback-label" for="feedback-name">Ваше имя:</label>
-          <input class="feedback-input" id="feedback-name" name ="feedback-name" type="text" placeholder="Представьтесь, пожалуйста">
-          <label class="feedback-label" for="feedback-email">Ваш e-mail:</label>
-          <input class="feedback-input" id="feedback-email" name="feedback-email" type="email" placeholder="Для отправки ответа">
-          <label class="feedback-label" for="feedback-textarea">Текст письма:</label>
-          <textarea class="feedback-input" id="feedback-textarea" name="feedback-textarea" placeholder="В свободной форме"></textarea>
-          <div class="feedback-button-area">
-            <button class="btn" name="feedback-submit" type="submit" value="Send">Отправить</button>
-          </div>
-        </form>
+        <div class="pop-up">
+          <form class="hidden feedback" action="//feedback" method="POST">
+            <label class="feedback-label" for="feedback-name">Ваше имя:</label>
+            <input class="feedback-input" id="feedback-name" name ="feedback-name" type="text" placeholder="Представьтесь, пожалуйста">
+            <label class="feedback-label" for="feedback-email">Ваш e-mail:</label>
+            <input class="feedback-input" id="feedback-email" name="feedback-email" type="email" placeholder="Для отправки ответа">
+            <label class="feedback-label" for="feedback-textarea">Текст письма:</label>
+            <textarea class="feedback-input" id="feedback-textarea" name="feedback-textarea" placeholder="В свободной форме"></textarea>
+            <div class="button-area">
+              <button class="btn" name="feedback-submit" type="submit" value="Send">Отправить</button>
+            </div>
+          </form>
+        </div>
       </section>
 
     </main>

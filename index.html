@@ -232,10 +232,13 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <div class="contacts-map">
-            <div class="visually-hidden contacts-map-full"></div>
+            <a href="#" title="Как к нам добраться:"><img src="img/map.jpg" width="100" height="100" alt="Как к нам добраться:"></a>
+          </div>
+          <div class="pop-up pop-up-map">
+            <span class="pop-up-close">X</span>
           </div>
           <a class="btn btn-feedback" href="#">Напишите нам!</a>
-          <div class="visually hidden pop-up">
+          <div class="pop-up pop-up-feedback">
             <form class="feedback" action="//feedback" method="POST">
               <label class="feedback-label" for="feedback-name">Ваше имя:</label>
               <input class="feedback-input" id="feedback-name" name ="feedback-name" type="text" placeholder="Представьтесь, пожалуйста">
@@ -247,6 +250,7 @@
                 <button class="btn" name="feedback-submit" type="submit" value="send">Отправить</button>
               </div>
             </form>
+            <span class="pop-up-close">X</span>
           </div>
         </section>
       </div>
@@ -278,9 +282,11 @@
           Все права защищены
         </p>
         <div class="footer-social">
-          <a class="vk" href="#"></a>
-          <a class="fb" href="#"></a>
-          <a class="ig" href="#"></a>
+          <ul>
+            <li><a class="social-btn" href="#">ВКонтакте</a></li>
+            <li><a class="social-btn" href="#">Фейсбук</a></li>
+            <li><a class="social-btn" href="#">Инстаграм</a></li>
+          </ul>
         </div>
         <p class="footer-text">Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
         <p class="footer-text">Разработано —<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>

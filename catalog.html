@@ -6,14 +6,15 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="logo"><a href="index.html">Техномарт</a></div>
+      <div class="logo"><a href="index.html" aria-label="Главная страница">Техномарт</a></div>
       <div class="customer">
-        <form action="//search" method="GET">
-          <input class="customer search" name="search" type="search" placeholder="Поиск:">
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <label class="visually-hidden" for="customer-search"><span class="visually-hidden">Поиск</span></label>
+          <input class="customer-search" id="customer-search" name="search" type="search" placeholder="Поиск:">
         </form>
-        <a class="customer bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="customer cart" href="#">Корзина: <span class="cart-count">10</span></a>
-        <a class="customer order" href="#">Оформить заказ</a>
+        <a class="customer-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
+        <a class="customer-cart" href="#">Корзина: <span class="cart-count">10</span></a>
+        <a class="customer-order" href="#">Оформить заказ</a>
       </div>
       <div class="info">
         <p class="info-general">Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -21,9 +22,9 @@
         <span class="info-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         <div class="user-actions">
           <div class="user-main">
-            <a class="user-actions-profile" href="#"></a>
+            <a class="user-actions-profile" href="#"><span class="visually-hidden">Профиль</span></a>
             <a class="user-actions-profile" href="#">Равшан Джамшутович</a>
-            <a class="user-actions-exit" href="#"></a>
+            <a class="user-actions-exit" href="#"><span class="visually-hidden">Выход</span></a>
           </div>
           <div class="user-additional">
             <a class="user-actions-personal" href="#">Мои заказы</a>
@@ -48,25 +49,28 @@
 
     <main class="catalog-content">
       <ul class="breadcrumbs">
-        <li><a class="home-icon" href="/"></a></li>
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a class="home-icon" href="/">Домой</a></li>
+        <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
-        <li>Перфораторы</li>
+        <li aria-current="page"><span class="visually-hidden">Текущая страница</span>Перфораторы</li>
       </ul>
 
       <section class="filter">
         <h1>Перфораторы</h1>
         <aside>
           <p>Фильтр:</p>
-          <form action="//filter" method="POST" oninput="maxvalue.placeholder=range.value">
-            <section class="filter-price">
-              <h2>Цена:</h2>
-              <input name="range" type="range" min="0" max="40000" step="1">
-              <input name="minvalue" type="number" min="0" max="40000" step="1" placeholder="0"> —
-              <input name="maxvalue" type="number" min="0" max="40000" step="1">
-            </section>
-            <section class="filter-manufacturers">
-              <h2>Производители:</h2>
+          <form action="https://echo.htmlacademy.ru" method="GET" oninput="maxprice.placeholder=range.value">
+            <fieldset class="filter-price">
+              <legend>Цена:</legend>
+              <label class="visually-hidden" for="range-slider">Ценовой диапазон</label>
+              <input class="range-slider" id="range-slider" name="range" type="range" min="0" max="40000" step="1">
+              <label class="visually-hidden" for="range-min">Минимальная цена</label>
+              <input class="price-range" id="range-min" name="minprice" type="number" min="0" max="40000" step="1" placeholder="0"> —
+              <label class="visually-hidden" for="range-max">Максимальная цена</label>
+              <input class="price-range" id="range-max" name="maxprice" type="number" min="0" max="40000" step="1">
+            </fieldset>
+            <fieldset class="filter-manufacturers">
+              <legend>Производители:</legend>
               <input class="filter-checkbox" id="filter-checkbox-1" name="bosch" type="checkbox" checked>
               <label class="checkbox-label" for="filter-checkbox-1">bosch</label>
               <input class="filter-checkbox" id="filter-checkbox-2" name="interscol" type="checkbox">
@@ -77,14 +81,14 @@
               <label class="checkbox-label" for="filter-checkbox-4">dewalt</label>
               <input class="filter-checkbox" id="filter-checkbox-5" name="hitachi" type="checkbox">
               <label class="checkbox-label" for="filter-checkbox-5">hitachi</label>
-            </section>
-            <section class="filter-power-supply">
-              <h2>Питание</h2>
+            </fieldset>
+            <fieldset class="filter-power-supply">
+              <legend>Питание</legend>
               <input class="filter-radio" id="power-radio-1" name="power-supply" type="radio" value="battery" checked>
               <label class="label-radio" for="power-radio-1">Аккумуляторные</label>
               <input class="filter-radio" id="power-radio-2" name="power-supply" type="radio" value="power-grid">
               <label class="label-radio" for="power-radio-2">Сетевые</label>
-            </section>
+            </fieldset>
             <button class="btn-submit" type="submit">Показать</button>
           </form>
         </aside>
@@ -95,8 +99,8 @@
           <a href="#">По цене</a>
           <a href="#">По типу</a>
           <a href="#">По функционалу</a>
-          <a href="#"></a>
-          <a href="#"></a>
+          <a href="#"><span class="visually-hidden">По возрастанию</span></a>
+          <a href="#"><span class="visually-hidden">По убыванию</span></a>
         </div>
         <h2 class="visually-hidden">Каталог продукции</h2>
         <ul class="goods-list catalog-list">
@@ -170,20 +174,20 @@
             <a class="bookmark-btn" href="#">В закладки</a>
           </li>
         </ul>
-        <div class="pop-up pop-up-cart">
+        <div class="modal modal-cart">
           <p>Товар добавлен в корзину!</p>
           <div class="button-area">
-            <button class="btn" type="button">Оформить заказ</button>
+            <a class="btn" href="#">Оформить заказ</a>
             <button class="btn return-to-shopping" type="button">Продолжить покупки</button>
           </div>
-          <span class="pop-up-close">X</span>
+          <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
         </div>
-        <div class="pages">
-          <a class="page-navigation active" href="">1</a>
-          <a class="page-navigation" href="catalog_2.html">2</a>
-          <a class="page-navigation" href="catalog_3.html">3</a>
-          <a class="page-navigation-next" href="catalog_2.html">Следующая</a>
-        </div>
+        <ul class="pages">
+          <li aria-current="page"><a class="page-navigation active" href="#" aria-label="Страница">1</a></li>
+          <li><a class="page-navigation" href="catalog_2.html" aria-label="Страница">2</a></li>
+          <li><a class="page-navigation" href="catalog_3.html" aria-label="Страница">3</a></li>
+          <li><a class="page-navigation-next" href="catalog_2.html" aria-label="Страница">Следующая</a></li>
+        </ul>
       </section>
 
       <article class="catalog-additional-info">
@@ -199,7 +203,7 @@
 
     <footer class="page-footer">
       <div class="footer-main">
-        <div class="logo"><a href="index.html">Техномарт</a></div>
+        <div class="logo"><a href="index.html" aria-label="Главная страница">Техномарт</a></div>
         <ul class="footer-main-menu">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
@@ -223,9 +227,9 @@
         </p>
         <div class="footer-social">
           <ul>
-            <li><a class="social-btn" href="#">ВКонтакте</a></li>
-            <li><a class="social-btn" href="#">Фейсбук</a></li>
-            <li><a class="social-btn" href="#">Инстаграм</a></li>
+            <li><a class="social-btn" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
+            <li><a class="social-btn" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-btn" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
         </div>
         <p class="footer-text">Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>

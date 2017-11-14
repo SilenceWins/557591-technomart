@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт: Каталог</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="catalog-page">
     <header class="page-header">
       <div class="logo"><a href="index.html" aria-label="Главная страница">Техномарт</a></div>
       <div class="customer">
@@ -13,13 +15,15 @@
           <input class="customer-search" id="customer-search" name="search" type="search" placeholder="Поиск:">
         </form>
         <a class="customer-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
-        <a class="customer-cart" href="#">Корзина: <span class="cart-count">10</span></a>
+        <a class="customer-cart-filled" href="#">Корзина: <span class="cart-count">10</span></a>
         <a class="customer-order" href="#">Оформить заказ</a>
       </div>
       <div class="info">
         <p class="info-general">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <span class="info-tel">+7 (812) 555-05-55</span>
-        <span class="info-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+        <p class="info-general">
+          <span class="info-tel">+7 (812) 555-05-55</span>
+          <span class="info-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+        </p>
         <div class="user-actions">
           <div class="user-main">
             <a class="user-actions-profile" href="#"><span class="visually-hidden">Профиль</span></a>
@@ -49,10 +53,10 @@
 
     <main class="catalog-content">
       <ul class="breadcrumbs">
-        <li><a class="home-icon" href="/">Домой</a></li>
+        <li><a class="home-icon" href="/"></a><span class="visually-hidden">Домой</span></li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
-        <li aria-current="page"><span class="visually-hidden">Текущая страница</span>Перфораторы</li>
+        <li aria-current="page"><a><span class="visually-hidden">Текущая страница</span>Перфораторы</a></li>
       </ul>
 
       <section class="filter">
@@ -62,8 +66,10 @@
           <form action="https://echo.htmlacademy.ru" method="GET" oninput="maxprice.placeholder=range.value">
             <fieldset class="filter-price">
               <legend>Цена:</legend>
-              <label class="visually-hidden" for="range-slider">Ценовой диапазон</label>
-              <input class="range-slider" id="range-slider" name="range" type="range" min="0" max="40000" step="1">
+              <div class="range-slider">
+                <label class="visually-hidden" for="range-slider">Ценовой диапазон</label>
+                <input id="range-slider" name="range" type="range" min="0" max="40000" step="1">
+              </div>
               <label class="visually-hidden" for="range-min">Минимальная цена</label>
               <input class="price-range" id="range-min" name="minprice" type="number" min="0" max="40000" step="1" placeholder="0"> —
               <label class="visually-hidden" for="range-max">Максимальная цена</label>
@@ -95,13 +101,14 @@
       </section>
 
       <section class="grid-products">
-        <div class="sorting">Сортировка:
-          <a href="#">По цене</a>
-          <a href="#">По типу</a>
-          <a href="#">По функционалу</a>
-          <a href="#"><span class="visually-hidden">По возрастанию</span></a>
-          <a href="#"><span class="visually-hidden">По убыванию</span></a>
-        </div>
+        <p>Сортировка:</p>
+        <ul class="sorting">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По функционалу</a></li>
+          <li><a href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+          <li><a href="#"><span class="visually-hidden">По убыванию</span></a></li>
+        </ul>
         <h2 class="visually-hidden">Каталог продукции</h2>
         <ul class="goods-list catalog-list">
           <li class="goods-item new-item">
@@ -232,8 +239,8 @@
             <li><a class="social-btn" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
         </div>
-        <p class="footer-text">Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        <p class="footer-text">Разработано —<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+        <p class="footer-text">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <p class="footer-text">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </div>
     </footer>
   </body>

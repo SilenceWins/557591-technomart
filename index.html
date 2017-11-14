@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="main-page">
 
     <header class="page-header">
       <a class="visually-hidden" href="#main-content">Перейти к содержанию</a>
-      <p class="logo">Техномарт</p>
+      <div class="logo">Техномарт</div>
       <div class="customer">
         <form action="https://echo.htmlacademy.ru" method="GET">
-          <label class="visually-hidden" for="customer-search"><span class="visually-hidden">Поиск</span></label>
+          <label class="visually-hidden" for="customer-search">Поиск</label>
           <input class="customer-search" id="customer-search" name="search" type="search" placeholder="Поиск:">
         </form>
         <a class="customer-bookmarks" href="#">Закладки: <span class="bookmarks-count">0</span></a>
@@ -32,7 +34,7 @@
 
       <nav class="main-menu">
         <ul class="main-menu-links">
-          <li aria-current="page"><span class="visually-hidden">Текущая страница</span> Главная</li>
+          <li aria-current="page"><span class="visually-hidden">Текущая страница</span><a class="menu-link">Главная</a></li>
           <li><a class="menu-link" href="#">Компания</a></li>
           <li><a class="menu-link" href="catalog.html">Каталог</a></li>
           <li><a class="menu-link" href="#">Новости</a></li>
@@ -187,12 +189,12 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-controls">
-          <label class="services-delivery" for="services-radio-1">Доставка</label>
           <input class="services-radio" id="services-radio-1" name="services-radio" type="radio" checked>
-          <label class="services-guarantee" for="services-radio-2">Гарантия</label>
+          <label class="services-delivery" for="services-radio-1">Доставка</label>
           <input class="services-radio" id="services-radio-2" name="services-radio" type="radio">
-          <label class="services-credit" for="services-radio-3">Кредит</label>
+          <label class="services-guarantee" for="services-radio-2">Гарантия</label>
           <input class="services-radio" id="services-radio-3" name="services-radio" type="radio">
+          <label class="services-credit" for="services-radio-3">Кредит</label>
         </div>
         <section class="services-info">
           <h3>Доставка</h3>
@@ -229,9 +231,9 @@
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="about-us-partners">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+            <li><span>——</span> Деловые линии</li>
+            <li><span>——</span> Автотрейдинг</li>
+            <li><span>——</span> ЖелДорЭкспедиция</li>
           </ul>
           <a class="btn" href="#">Подробнее о компании</a>
         </section>
@@ -257,7 +259,7 @@
                 <label class="feedback-label" for="feedback-textarea">Текст письма:</label>
                 <textarea class="feedback-input" id="feedback-textarea" name="feedback-textarea" placeholder="В свободной форме"></textarea>
                 <div class="button-area">
-                  <button class="btn" name="feedback-submit" type="submit" value="send">Отправить</button>
+                  <button class="btn" name="feedback-submit" type="submit" value="send"><span>Отправить</span></button>
                 </div>
               </fieldset>
             </form>
@@ -299,8 +301,8 @@
             <li><a class="social-btn" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
         </div>
-        <p class="footer-text">Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        <p class="footer-text">Разработано —<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+        <p class="footer-text">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <p class="footer-text">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </div>
     </footer>
   </body>

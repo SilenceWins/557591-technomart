@@ -55,6 +55,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -106,15 +107,12 @@ a {
 .logo:hover,
 .logo:focus,
 .btn:hover,
-.btn:focus,
-.customer-cart-filled:hover,
-.customer-cart-filled:focus {
+.btn:focus {
   background-color: #ca2c37;
 }
 
 .logo:active,
-.btn:active,
-.customer-cart-filled:active {
+.btn:active {
   background-color: #ba2732;
 }
 
@@ -271,6 +269,32 @@ a {
   font-size: 13px;
   font-family: "PT Sans", Arial, sans-serif;
   color: black;
+}
+
+.pages li {
+  display: inline-block;
+}
+
+.pages a {
+  display: inline-block;
+  width:38px;
+  height:38px;
+  line-height: 38px;
+
+  vertical-align: middle;
+  text-align:center;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.pages a:hover,
+.pages a:focus {
+  border-color: #bdc6ca;
+}
+
+.pages a:active {
+  border-color: #ee3643;
 }
 
 .breadcrumbs a,
@@ -504,13 +528,24 @@ a {
   background-color: #ff5357;
 }
 
-.services-info .credit:hover,
-.services-info .credit:focus {
-  background-color: #ca2c37;
+.services-info {
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
-.services-info .credit:active {
-  background-color: #ba2732;
+.services-info:nth-of-type(1) {
+  background-image: url("../img/slider3.jpg");
+  background-size: 468px;
+}
+
+.services-info:nth-of-type(2) {
+  background-image: url("../img/slider4.png");
+  background-size: 389px;
+}
+
+.services-info:nth-of-type(3) {
+  background-image: url("../img/slider5.jpg");
+  background-size: 465px;
 }
 
 .about-us-partners {

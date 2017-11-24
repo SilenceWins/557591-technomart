@@ -72,8 +72,27 @@
             <strong>Техника</strong>
             <a class="btn btn-promo" href="#">для стройки</a>
           </div>
-          <div class="promo-slider">
-            <img src="img/slider1.jpg" width="620" height="266" alt="Раздел «Перфораторы»">
+          <div class="slider">
+            <input class="visually-hidden slider-1" id="slider-1" name="slider-radio" type="radio" checked>
+            <input class="visually-hidden slider-2" id="slider-2" name="slider-radio" type="radio">
+            <label class="slider-label slider-label-1" for="slider-1"><span class="visually-hidden">Слайдер 1</span></label>
+            <label class="slider-label slider-label-2" for="slider-2"><span class="visually-hidden">Слайдер 2</span></label>
+            <!-- <button class="slider-left" type="button"><span class="visually-hidden">Влево</span></button>
+            <button class="slider-right" type="button"><span class="visually-hidden">Вправо</span></button> -->
+            <div class="inner-wrapper">
+              <div class="slider-item">
+                <h2>Перфораторы</h2>
+                <p>Настоящие мужские игрушки</p>
+                <img src="img/slider1.jpg" width="620" height="266" alt="Раздел «Перфораторы»">
+                <a class="btn" href="catalog.html">Открыть каталог</a>
+              </div>
+              <div class="slider-item">
+                <h2>Дрели</h2>
+                <p>Соседям на радость!</p>
+                <img src="img/slider2.jpg" width="620" height="266" alt="Раздел «Дрели»">
+                <a class="btn" href="catalog.html">Открыть каталог</a>
+              </div>
+            </div>
           </div>
           <div class="promo-item discount">
             <strong>Скидки 50%</strong>
@@ -87,27 +106,6 @@
       </section>
 
 
-      <div class="slider">
-        <label class="visually-hidden" for="slider-1">Слайдер 1</label>
-        <input class="slider-radio" id="slider-1" name="slider-radio" type="radio" checked>
-        <label class="visually-hidden" for="slider-2">Слайдер 2</label>
-        <input class="slider-radio" id="slider-2" name="slider-radio" type="radio">
-        <button class="slider-left" type="button"><span class="visually-hidden">Влево</span></button>
-        <button class="slider-right" type="button"><span class="visually-hidden">Вправо</span></button>
-        <div class="slider-item">
-          <h2>Перфораторы</h2>
-          <p>Настоящие мужские игрушки</p>
-          <img src="img/slider1.jpg" width="620" height="266" alt="Раздел «Перфораторы»">
-          <a class="btn" href="catalog.html">Открыть каталог</a>
-        </div>
-        <div class="slider-item">
-          <h2>Дрели</h2>
-          <p>Соседям на радость!</p>
-          <img src="img/slider2.jpg" width="620" height="266" alt="Раздел «Дрели»">
-          <a class="btn" href="catalog.html">Открыть каталог</a>
-        </div>
-      </div>
-
       <section class="popular goods">
         <div class="container">
           <header>
@@ -115,36 +113,44 @@
             <a class="btn" href="#">все популярные товары</a>
           </header>
           <ul class="goods-list popular-list">
-            <li class="goods-item new-item">
+            <li class="goods-item">
               <img src="img/goods1.png" width="218" height="170" alt="BOSCH BFG 9000">
               <h3>Перфоратор BOSCH BFG 9000</h3>
               <s>32500 Р.</s>
               <p class="price">25500 Р.</p>
-              <a class="buy-btn" href="#">Купить</a>
-              <a class="bookmark-btn" href="#">В закладки</a>
+              <div class="goods-actions">
+                <a class="buy-btn" href="#">Купить</a>
+                <a class="bookmark-btn" href="#">В закладки</a>
+              </div>
             </li>
-            <li class="goods-item new-item">
+            <li class="goods-item">
               <img src="img/goods2.png" width="218" height="170" alt="BOSCH BFG 3000">
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <s>22500 Р.</s>
               <p class="price">15500 Р.</p>
-              <a class="buy-btn" href="#">Купить</a>
-              <a class="bookmark-btn" href="#">В закладки</a>
+              <div class="goods-actions">
+                <a class="buy-btn" href="#">Купить</a>
+                <a class="bookmark-btn" href="#">В закладки</a>
+              </div>
             </li>
-            <li class="goods-item new-item">
+            <li class="goods-item">
               <img src="img/goods3.png" width="218" height="170" alt="BOSCH BFG 6000">
               <h3>Перфоратор BOSCH BFG 6000</h3>
               <s>30500 Р.</s>
               <p class="price">25500 Р.</p>
-              <a class="buy-btn" href="#">Купить</a>
-              <a class="bookmark-btn" href="#">В закладки</a>
+              <div class="goods-actions">
+                <a class="buy-btn" href="#">Купить</a>
+                <a class="bookmark-btn" href="#">В закладки</a>
+              </div>
             </li>
             <li class="goods-item new-item">
               <img src="img/goods4.png" width="218" height="170" alt="BOSCH BFG 2000">
               <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="price">12500 Р.</p>
-              <a class="buy-btn" href="#">Купить</a>
-              <a class="bookmark-btn" href="#">В закладки</a>
+              <div class="goods-actions">
+                <a class="buy-btn" href="#">Купить</a>
+                <a class="bookmark-btn" href="#">В закладки</a>
+              </div>
             </li>
           </ul>
         </div>

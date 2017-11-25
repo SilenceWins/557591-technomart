@@ -215,37 +215,39 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="inner-wrapper">
+            <input class="services-radio-1 visually-hidden" id="services-radio-1" name="services-radio" type="radio" checked>
+            <input class="services-radio-2 visually-hidden" id="services-radio-2" name="services-radio" type="radio">
+            <input class="services-radio-3 visually-hidden" id="services-radio-3" name="services-radio" type="radio">
             <div class="services-controls">
-              <input class="services-radio visually-hidden" id="services-radio-1" name="services-radio" type="radio" checked>
-              <label class="services-delivery" for="services-radio-1">Доставка</label>
-              <input class="services-radio visually-hidden" id="services-radio-2" name="services-radio" type="radio">
-              <label class="services-guarantee" for="services-radio-2">Гарантия</label>
-              <input class="services-radio visually-hidden" id="services-radio-3" name="services-radio" type="radio">
-              <label class="services-credit" for="services-radio-3">Кредит</label>
+              <label for="services-radio-1">Доставка</label>
+              <label for="services-radio-2">Гарантия</label>
+              <label for="services-radio-3">Кредит</label>
             </div>
-            <section class="services-info visually-hidden">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!
-              </p>
-            </section>
-            <section class="services-info visually-hidden"> <!-- visually-hidden ВРЕМЕННО -->
-              <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит,
-                а также в случае пожара, спровоцированного его возгоранием,
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                сгоревший товар на новый.
-                Дом уж восстановите как-нибудь сами.
-              </p>
-            </section>
-            <section class="services-info"> <!-- visually-hidden ВРЕМЕННО -->
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.
-              </p>
-              <a class="btn credit" href="#">отправить заявку</a>
-            </section>
+            <div class="services-slides">
+              <section class="services-info">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо<br>
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!
+                </p>
+              </section>
+              <section class="services-info"> <!-- visually-hidden ВРЕМЕННО -->
+                <h3>Гарантия</h3>
+                <p>Если купленный у нас товар поломается или заискрит,<br>
+                  а также в случае пожара, спровоцированного его возгоранием,<br>
+                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                  сгоревший товар на новый.
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+              </section>
+              <section class="services-info"> <!-- visually-hidden ВРЕМЕННО -->
+                <h3>Кредит</h3>
+                <p>Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.
+                </p>
+                <a class="btn credit" href="#">отправить заявку</a>
+              </section>
+            </div>
           </div>
         </div>
       </section>
@@ -260,9 +262,9 @@
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="about-us-partners">
-            <li><span>——</span> Деловые линии</li>
-            <li><span>——</span> Автотрейдинг</li>
-            <li><span>——</span> ЖелДорЭкспедиция</li>
+            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></line></svg> Деловые линии</li>
+            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></svg> Автотрейдинг</li>
+            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></svg> ЖелДорЭкспедиция</li>
           </ul>
           <a class="btn" href="#">Подробнее о компании</a>
         </section>

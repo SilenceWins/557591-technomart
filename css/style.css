@@ -555,17 +555,6 @@ img {
   background-color: #ee3643;
 }
 
-/*.slider-label::after {
-  background-color: white;
-  border: 2px solid white;
-}
-
-.slider-label:last-of-type::after {
-  left: 315px;
-
-  background-color: #ee3643;
-}*/
-
 .slider-1:checked ~ .slider-label-2,
 .slider-2:checked ~ .slider-label-1 {
   background-color: white;
@@ -678,35 +667,52 @@ img {
 }
 
 .services-controls label {
+  flex-shrink: 0;
   height: 61px;
-  padding-left: 23px;
-  line-height: 61px;
+  padding: 16px 0 15px 23px;
+  margin-bottom: 1px;
 
   font-size: 21px;
+  line-height: 30px;
   font-weight: bold;
-
-  border-bottom: 1px solid #f4f8f9;
-}
-
-.services-controls label:last-of-type {
-  height: 60px;
-  line-height: 60px;
-  border-bottom: none;
-}
-
-.services-radio + label {
-  background-color: #32425c;
   color: white;
+
+  background-color: #32425c;
+  box-shadow:
+      inset 0 1px #405069,
+      0 1px #293449;
 }
 
-.services-radio:hover + label,
-.services-radio:focus + label {
+.services-radio-1:hover ~ .services-controls label[for="services-radio-1"],
+.services-radio-1:focus ~ .services-controls label[for="services-radio-1"],
+.services-radio-2:hover ~ .services-controls label[for="services-radio-2"],
+.services-radio-2:focus ~ .services-controls label[for="services-radio-2"],
+.services-radio-3:hover ~ .services-controls label[for="services-radio-3"],
+.services-radio-3:focus ~ .services-controls label[for="services-radio-3"] {
   background-color: #293449;
 }
 
-.services-radio:checked + label {
-  background-color: white;
+.services-radio-1:checked ~ .services-controls label[for="services-radio-1"],
+.services-radio-2:checked ~ .services-controls label[for="services-radio-2"],
+.services-radio-3:checked ~ .services-controls label[for="services-radio-3"] {
   color: #32425c;
+
+  background-color: white;
+  box-shadow:
+      inset 0 1px white,
+      0 1px white;
+}
+
+.services-radio-1:checked ~ .services-slides .services-info {
+  transform: translatex(0px);
+}
+
+.services-radio-2:checked ~ .services-slides .services-info {
+  transform: translatex(-620px);
+}
+
+.services-radio-3:checked ~ .services-slides .services-info {
+  transform: translatex(-1240px);
 }
 
 .services-info h3 {
@@ -752,9 +758,11 @@ img {
 }
 
 .about-us-partners li {
-  font-size: 18px;
-  color: black;
   margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: black;
 }
 
 .about-us-partners li:last-of-type {
@@ -1032,10 +1040,6 @@ img {
   align-content: flex-start;
 }
 
-/* .promo-slider {
-  height: 266px;
-} */
-
 .promo-item {
   position: relative;
   width: 300px;
@@ -1293,14 +1297,32 @@ img {
 }
 
 .services .inner-wrapper {
+  position: relative;
+
   display: flex;
-  min-height: 275px;
+  min-height: 345px;
+  padding-top: 70px;
+}
+
+.services .inner-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 230px;
+
+  width: 10px;
+  height: 279px;
+
+  background-image: url("../img/slider_shadow.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 10px 279px;
 }
 
 .services-controls {
   display: flex;
   flex-direction: column;
-  width: 240px;
+  min-width: 240px;
   margin-right: 80px;
 }
 
@@ -1310,12 +1332,22 @@ img {
 
 .services .services-heading {
   width: 400px;
-  margin-bottom: 70px;
+
   line-height: 24px;
 }
 
+.services .services-slides {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 620px;
+}
+
 .services-info {
-  flex-grow: 1;
+  flex-shrink: 0;
+  width: 620px;
 }
 
 .services-info p {
@@ -1472,8 +1504,14 @@ li:nth-of-type(3) .social-btn::after {
   background-image: url("../img/icon-insta.svg");
 }
 
+.about-us-partners .decor-line {
+  margin-right: 6px;
 
+  width: 25px;
+  height: 10px;
+}
 
-
-
-
+.decor-line line{
+  stroke-width: 2px;
+  stroke: #ee3643;
+}

@@ -576,6 +576,14 @@ img {
   border: none;
 }
 
+.filter .filter-price,
+.filter .filter-manufacturers {
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .filter p {
   padding: 10px 0 10px 18px;
   margin-bottom: 10px;
@@ -595,6 +603,10 @@ img {
   line-height: 30px;
   font-weight: bold;
   color: black;
+}
+
+.filter legend {
+  margin-bottom: 15px;
 }
 
 .filter-price .price-controls {
@@ -632,9 +644,9 @@ img {
   padding: 10px 0;
 }
 
-.filter-price legend {
+/* .filter-price legend {
   margin-bottom: 15px;
-}
+} */
 
 .filter .range-slider {
   position: relative;
@@ -665,14 +677,12 @@ img {
   cursor: pointer;
 }
 
-.filter .range-slider::before {
+.filter .range-slider::after {
   z-index: 1;
   left: 160px;
 }
 
 .range-slider .scale {
-  position: relative;
-
   width: 180px;
   height: 2px;
 
@@ -681,13 +691,61 @@ img {
 
 .filter-manufacturers label,
 .filter-power-supply label {
+  position: relative;
+
+  margin-bottom: 19px;
+  padding-left: 34px;
+
   font-size: 15px;
   line-height: 20px;
   color: black;
 }
 
+.filter-manufacturers label:last-of-type,
+.filter-power-supply label:last-of-type {
+  margin-bottom: 0;
+}
+
+.filter-manufacturers,
+.filter-power-supply {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-manufacturers label::before,
+.filter-power-supply label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 27px;
+  height: 23px;
+
+  background-color: transparent;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-manufacturers input:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
 .filter-power-supply label {
   font-size: 14px;
+}
+
+.filter-power-supply label::before {
+  top: -2px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+}
+
+.filter-power-supply input:checked + label::before {
+  background-image: url("../img/radio-on.svg");
 }
 
 .filter-radio:disabled + label {

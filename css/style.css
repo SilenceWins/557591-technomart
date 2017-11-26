@@ -101,7 +101,7 @@ img {
 }
 
 .catalog-page .page-header,
-.filter h1,
+.catalog-heading,
 .catalog-additional-info {
   background-color: #f2f6f8;
 }
@@ -401,8 +401,12 @@ img {
 
 .main-menu-links,
 .breadcrumbs,
-.sorting,
-.pages {
+.sorting-controls,
+.pages,
+.page-footer ul,
+.about-us-partners,
+.goods-list,
+.manufacturers-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -456,8 +460,8 @@ img {
 .contacts p,
 .breadcrumbs a,
 .filter p,
-.grid-products > p,
-.sorting a,
+.grid-products p,
+.sorting-controls a,
 .pages a,
 .catalog-additional-info p {
   margin: 0;
@@ -493,8 +497,8 @@ img {
 }
 
 .breadcrumbs a,
-.grid-products > p,
-.sorting a {
+.grid-products p,
+.sorting-controls a {
   text-transform: uppercase;
 }
 
@@ -536,7 +540,6 @@ img {
   background-image: url("../img/icon-home.svg");
 }
 
-.grid-products > p,
 .sorting,
 .filter p,
 .filter-price .range-slider,
@@ -544,24 +547,24 @@ img {
   background-color: #f7f3ec;
 }
 
-.sorting a {
+.sorting-controls a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-color: #ee3643;
 }
 
-.sorting a:hover,
-.sorting a:focus {
+.sorting-controls a:hover,
+.sorting-controls a:focus {
   color: black;
   text-decoration-style: solid;
 }
 
-.sorting a:active {
+.sorting-controls a:active {
   color: #ee3643;
 }
 
-.filter h1 {
+.catalog-heading {
   margin: 0;
   margin-bottom: 20px;
   padding: 29px 0 30px 28px;
@@ -644,10 +647,6 @@ img {
   padding: 10px 0;
 }
 
-/* .filter-price legend {
-  margin-bottom: 15px;
-} */
-
 .filter .range-slider {
   position: relative;
 
@@ -712,6 +711,10 @@ img {
   flex-direction: column;
 }
 
+.filter .filter-power-supply {
+  margin-bottom: 75px;
+}
+
 .filter-manufacturers label::before,
 .filter-power-supply label::before {
   content: "";
@@ -750,6 +753,39 @@ img {
 
 .filter-radio:disabled + label {
   opacity: 0.4;
+}
+
+.filter .btn-submit {
+  max-width: 140px;
+  padding: 8px 37px;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: inherit;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 1px;
+}
+
+.grid-products {
+  padding-left: 20px;
+}
+
+.sorting,
+.sorting-controls  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting {
+  padding: 10px 106px 10px 19px;
+  margin-bottom: 20px;
+
+  line-height: 18px;
+  font-size: 13px;
 }
 
 .promo strong {
@@ -928,7 +964,7 @@ img {
 }
 
 .popular h2,
-.filter h1,
+.catalog-heading,
 .catalog-additional-info h2 {
   font-size: 30px;
   line-height: 30px;
@@ -937,7 +973,14 @@ img {
   font-weight: normal;
 }
 
+.catalog-additional-info {
+  min-height: 261px;
+  padding-top: 64px;
+}
+
 .catalog-additional-info h2 {
+  margin: 0 0 28px 0;
+
   color: black;
 }
 
@@ -955,7 +998,12 @@ img {
   font-size: 17px;
 }
 
-.goods-item:last-of-type h3 {
+.catalog-item {
+  margin-bottom: 20px;
+}
+
+.goods-item:last-of-type h3,
+.catalog-item:nth-of-type(3n) h3 {
    margin-bottom: 38px;
 }
 
@@ -1106,9 +1154,7 @@ img {
 }
 
 .about-us-partners {
-  list-style: none;
-  margin: 0 0 37px 0;
-  padding: 0;
+  margin-bottom: 37px;
 }
 
 .about-us-partners li {
@@ -1171,12 +1217,6 @@ img {
   background-color: #32425c;
 }
 
-.page-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .page-footer .logo {
   font-size: 30px;
   line-height: 30px;
@@ -1228,6 +1268,14 @@ img {
 .catalog-page {
   display: flex;
   flex-direction: column;
+}
+
+.catalog-content {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 .page-header {
@@ -1535,21 +1583,17 @@ img {
   width: 253px;
 }
 
-.popular ul {
+.goods-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
 .goods {
   margin-bottom: 21px;
 }
 
-.goods .goods-item {
+.goods-list .goods-item {
   position: relative;
 
   width: 220px;
@@ -1673,6 +1717,12 @@ img {
 
 .manufacturers {
   margin-bottom: 85px;
+}
+
+.manufacturers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .manufacturers-list a {
@@ -1810,7 +1860,6 @@ img {
 }
 
 .page-footer ul {
-  list-style: none;
   display: flex;
   justify-content: space-between;
 }

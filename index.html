@@ -266,9 +266,9 @@
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="about-us-partners">
-            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></line></svg> Деловые линии</li>
-            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></svg> Автотрейдинг</li>
-            <li><svg class="decor-line"><line x1="0" y1="4" x2="25" y2="4"></svg> ЖелДорЭкспедиция</li>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
           </ul>
           <a class="btn" href="#">Подробнее о компании</a>
         </section>
@@ -287,18 +287,26 @@
             <form class="feedback" action="https://echo.htmlacademy.ru" method="POST">
               <fieldset>
                 <legend class="visually-hidden">Обратная связь</legend>
-                <label class="feedback-label" for="feedback-name">Ваше имя:</label>
-                <input class="feedback-input" id="feedback-name" name ="feedback-name" type="text" placeholder="Представьтесь, пожалуйста">
-                <label class="feedback-label" for="feedback-email">Ваш e-mail:</label>
-                <input class="feedback-input" id="feedback-email" name="feedback-email" type="email" placeholder="Для отправки ответа">
-                <label class="feedback-label" for="feedback-textarea">Текст письма:</label>
-                <textarea class="feedback-input" id="feedback-textarea" name="feedback-textarea" placeholder="В свободной форме"></textarea>
-                <div class="button-area">
-                  <button class="btn" name="feedback-submit" type="submit" value="send"><span>Отправить</span></button>
+                <div class="inner-wrapper">
+                  <p>
+                    <label class="feedback-label" for="feedback-name">Ваше имя:</label>
+                    <input class="feedback-input" id="feedback-name" name ="feedback-name" type="text" placeholder="Представьтесь, пожалуйста">
+                  </p>
+                  <p>
+                    <label class="feedback-label" for="feedback-email">Ваш e-mail:</label>
+                    <input class="feedback-input" id="feedback-email" name="feedback-email" type="email" placeholder="Для отправки ответа">
+                  </p>
+                  <p class="textarea">
+                    <label class="feedback-label" for="feedback-textarea">Текст письма:</label>
+                    <textarea class="feedback-input" id="feedback-textarea" name="feedback-textarea" placeholder="В свободной форме"></textarea>
+                  </p>
                 </div>
               </fieldset>
+              <div class="button-area">
+                <button class="btn" name="feedback-submit" type="submit" value="send">Отправить</button>
+              </div>
             </form>
-            <button class="modal-close" type="button"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
+            <button class="modal-close visually-hidden" type="button"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
           </div>
         </section>
       </div>
@@ -331,7 +339,7 @@
       </div>
       <div class="footer-additional">
         <div class="container">
-          <p class="footer-text">©2010-2017 Компания «Техномарт»
+          <p class="footer-text">©2010-2017 Компания «Техномарт»<br>
             Все права защищены
           </p>
           <ul class="footer-social">
@@ -339,8 +347,8 @@
             <li><a class="social-btn" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
             <li><a class="social-btn" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
           </ul>
-          <p class="footer-text">Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-          <p class="footer-text">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+          <p class="footer-text">Обратная связь: <br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="footer-text">Разработано — <br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </footer>

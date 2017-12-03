@@ -568,7 +568,6 @@ img {
   min-height:38px;
   padding: 9px 0;
 
-  vertical-align: middle;
   text-align:center;
   line-height: 18px;
 
@@ -2354,19 +2353,18 @@ li:nth-of-type(3) .social-btn::after {
   width: 620px;
 
   background-color: white;
-  -webkit-box-shadow: inset 0 7px #ee3643;
-          box-shadow: inset 0 7px #ee3643;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 
 }
 
 .modal-feedback {
+  display: none;
   min-height: 430px;
 
-  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  box-shadow:
+      inset 0 7px #ee3643,
+      0 20px 40px rgba(0, 0, 0, 0.75);
 }
 
 .modal-feedback fieldset {
@@ -2466,6 +2464,10 @@ li:nth-of-type(3) .social-btn::after {
 
 .modal-cart {
   min-height: 282px;
+
+  box-shadow:
+      inset 0 7px #ee3643,
+      0 20px 40px rgba(41, 52, 73, 0.75);
 }
 
 .modal-cart::before {
@@ -2560,6 +2562,10 @@ li:nth-of-type(3) .social-btn::after {
 .modal-map .modal-close {
   top: 9px;
   right: 9px;
+}
+
+.modal-show {
+  display: block;
 }
 
 

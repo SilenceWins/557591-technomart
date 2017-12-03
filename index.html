@@ -278,14 +278,15 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <div class="contacts-map">
-            <a href="#" title="Как к нам добраться:"><img src="img/map.jpg" width="300" height="158" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8"></a>
+            <a href="#" id="modal-map" title="Как к нам добраться:"><img src="img/map.jpg" width="300" height="158" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8"></a>
           </div>
-          <div class="modal modal-map visually-hidden">
+          <div class="modal modal-map">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CBaGyCq1DB" width="940" height="446" frameborder="0"></iframe>
             <img src="img/map-modal.jpg" width="940" height="446" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8">
              <!-- ВРЕМЕННО СПРЯТАН -->
             <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
           </div>
-          <a class="btn btn-feedback" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn btn-feedback" id="modal-feedback" href="#">Заблудились? Напишите нам!</a>
           <div class="modal modal-feedback"> <!-- ВРЕМЕННО СПРЯТАН -->
             <form class="feedback" action="https://echo.htmlacademy.ru" method="POST">
               <fieldset>

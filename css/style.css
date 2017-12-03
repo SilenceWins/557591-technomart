@@ -1658,8 +1658,10 @@ img {
 
 .customer .search-field {
   width: 100%;
-  padding: 8px 48px 10px 48px;
-  min-height: 42px;
+  padding: 12px 48px;
+  height: 42px;
+
+  line-height: 18px;
 
   border: none;
   background-color: #293449;
@@ -1692,6 +1694,8 @@ img {
 .customer .search-field::-moz-placeholder {
   color: white;
   line-height: 18px;
+
+  opacity: 1;
 }
 
 .customer .search-field:-ms-input-placeholder {
@@ -2350,6 +2354,7 @@ li:nth-of-type(3) .social-btn::after {
   left: 50%;
   z-index: 1;
 
+  display: none;
   width: 620px;
 
   background-color: white;
@@ -2359,7 +2364,6 @@ li:nth-of-type(3) .social-btn::after {
 }
 
 .modal-feedback {
-  display: none;
   min-height: 430px;
 
   box-shadow:
@@ -2527,10 +2531,22 @@ li:nth-of-type(3) .social-btn::after {
           box-shadow: 0 0 16px rgba(47, 42, 43, 0.5);
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.modal-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .modal .modal-close {
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 3;
 
   width: 21px;
   height: 21px;

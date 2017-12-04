@@ -2366,7 +2366,11 @@ li:nth-of-type(3) .social-btn::after {
 .modal-feedback {
   min-height: 430px;
 
-  box-shadow:
+  -webkit-box-shadow:
+      inset 0 7px #ee3643,
+      0 20px 40px rgba(0, 0, 0, 0.75);
+
+          box-shadow:
       inset 0 7px #ee3643,
       0 20px 40px rgba(0, 0, 0, 0.75);
 }
@@ -2469,7 +2473,11 @@ li:nth-of-type(3) .social-btn::after {
 .modal-cart {
   min-height: 282px;
 
-  box-shadow:
+  -webkit-box-shadow:
+      inset 0 7px #ee3643,
+      0 20px 40px rgba(41, 52, 73, 0.75);
+
+          box-shadow:
       inset 0 7px #ee3643,
       0 20px 40px rgba(41, 52, 73, 0.75);
 }
@@ -2583,8 +2591,3 @@ li:nth-of-type(3) .social-btn::after {
 .modal-show {
   display: block;
 }
-
-
-
-
-

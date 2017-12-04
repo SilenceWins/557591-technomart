@@ -1,11 +1,13 @@
 var modal=document.querySelectorAll(".modal");
-var modal_buttons = document.querySelectorAll("[id*=modal]");
+var modal_buttons = document.querySelectorAll("[data-modal]");
+
+for (var k=0; k < modal_buttons.length; k++)
+  modal_buttons[k].addEventListener("click", function(evt) {
+    evt.preventDefault();
+    document.querySelector("." + this.dataset.modal).classList.add("modal-show");
+})
 
 for (var i=0; i < modal.length; i++) {
-  modal_buttons[i].addEventListener("click", function(evt) {
-    evt.preventDefault();
-    document.querySelector("." + this.id).classList.add("modal-show");
-  })
   window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
       for (var j=0; j < modal.length; j++) {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body class="main-page">
 
@@ -124,7 +124,7 @@
               <s>32500 Р.</s>
               <p class="price">25500 Р.</p>
               <div class="goods-actions">
-                <a class="buy-btn" href="#">Купить</a>
+                <a class="buy-btn" href="#" data-modal="modal-cart">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
             </li>
@@ -134,7 +134,7 @@
               <s>22500 Р.</s>
               <p class="price">15500 Р.</p>
               <div class="goods-actions">
-                <a class="buy-btn" href="#">Купить</a>
+                <a class="buy-btn" href="#" data-modal="modal-cart">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
             </li>
@@ -144,7 +144,7 @@
               <s>30500 Р.</s>
               <p class="price">25500 Р.</p>
               <div class="goods-actions">
-                <a class="buy-btn" href="#">Купить</a>
+                <a class="buy-btn" href="#" data-modal="modal-cart">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
             </li>
@@ -153,11 +153,19 @@
               <h3 class="without-discount">Перфоратор BOSCH BFG 2000</h3>
               <p class="price">12500 Р.</p>
               <div class="goods-actions">
-                <a class="buy-btn" href="#">Купить</a>
+                <a class="buy-btn" href="#" data-modal="modal-cart">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
             </li>
           </ul>
+          <div class="modal modal-cart">
+            <p>Товар добавлен в корзину!</p>
+            <div class="button-area">
+              <a class="btn" href="#">Оформить заказ</a>
+              <button class="btn return" type="button">Продолжить покупки</button>
+            </div>
+            <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+          </div>
         </div>
       </section>
 
@@ -236,7 +244,7 @@
                   Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!
                 </p>
               </section>
-              <section class="services-info"> <!-- visually-hidden ВРЕМЕННО -->
+              <section class="services-info">
                 <h3>Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его возгоранием,<br>
@@ -245,7 +253,7 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </section>
-              <section class="services-info"> <!-- visually-hidden ВРЕМЕННО -->
+              <section class="services-info">
                 <h3>Кредит</h3>
                 <p>Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.
@@ -278,16 +286,15 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <div class="contacts-map">
-            <a href="#" id="modal-map" title="Как к нам добраться:"><img src="img/map.jpg" width="300" height="158" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8"></a>
+            <a href="#" title="Как к нам добраться:" data-modal="modal-map"><img src="img/map.jpg" width="300" height="158" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8"></a>
           </div>
           <div class="modal modal-map">
             <iframe src="https://yandex.ru/map-widget/v1/-/CBaGyCq1DB" width="940" height="446" frameborder="0"></iframe>
             <img src="img/map-modal.jpg" width="940" height="446" alt="Санкт-Петербург, Большая Конюшенная ул., 19/8">
-             <!-- ВРЕМЕННО СПРЯТАН -->
             <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
           </div>
-          <a class="btn btn-feedback" id="modal-feedback" href="#">Заблудились? Напишите нам!</a>
-          <div class="modal modal-feedback"> <!-- ВРЕМЕННО СПРЯТАН -->
+          <a class="btn btn-feedback" href="#" data-modal="modal-feedback">Заблудились? Напишите нам!</a>
+          <div class="modal modal-feedback">
             <form class="feedback" action="https://echo.htmlacademy.ru" method="POST">
               <fieldset>
                 <legend class="visually-hidden">Обратная связь</legend>
@@ -356,6 +363,6 @@
         </div>
       </div>
     </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script-min.js"></script>
   </body>
 </html>
